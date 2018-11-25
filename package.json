@@ -1,0 +1,29 @@
+{
+  "name": "ellipse-to-polygon",
+  "version": "0.0.6",
+  "private": false,
+  "description": "Receives a Coordinate and ellipse properties and aproximates a ellipse by creating a polygon that fills its area",
+  "main": "main.js",
+  "module": "main.es.js",
+  "scripts": {
+    "build": "rollup -c ./rollup.config.js"
+  },
+  "keywords": [
+    "GeoJSON",
+    "ellipse",
+    "polygon"
+  ],
+  "author": "Eitan Freilich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eitanfr/ellipse-to-polygon/issues"
+  },
+  "homepage": "https://github.com/eitanfr/ellipse-to-polygon#readme",
+  "dependencies": {
+    "@turf/helpers": "^6.1.4",
+    "@turf/transform-rotate": "^5.1.5"
+  },
+  "devDependencies": {
+    "rollup": "^0.67.3"
+  }
+}
