@@ -9,7 +9,7 @@ The GeoJSON spec does not support ellipses. If you wish to create an area that r
 ## Usage
 
 ```javascript
-const ellipseToPolygon = require('circle-to-polygon');
+const ellipseToPolygon = require('ellipse-to-polygon');
 
 const center = [-27.4575887, -58.99029]; // [lon, lat] degrees
 const numberOfEdges = 32;                // optional that defaults to 360
