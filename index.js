@@ -12,13 +12,14 @@ function toDegrees(angleInRadians) {
 }
 
 function ellipseToPolygon(center, semiMajorAxis, semiMinorAxis, angleDegrees, pointsAmount = 360) {
-  let majorX = semiMajorAxis / (earthRadius * Math.cos(Math.PI * semiMinorAxis / 180)); //  (radius of the earth) wgs84
+  let majorX = semiMajorAxis / (earthRadius * Math.cos(toRadians(semiMinorAxis))); //  (radius of the earth) wgs84
   let minorY = semiMinorAxis / earthRadius; //  (radius of the earth) wgs84
 
   const points = [];
 
+  const delta = toRadians(360 / pointsAmount);
   for (let i = 0; i < pointsAmount; i++) {
-    const t = toRadians(i * (360 / pointsAmount));
+    const t = i * delta;
     const x = majorX * Math.cos(t);
     const y = minorY * Math.sin(t);
 
