@@ -17,7 +17,7 @@ const semiMinorAxis = 25000.0;           // in meters
 const semiMajorAxis = 40000.0;           // in meters
 const angle = 45.0;                      // in degrees
 
-const points = ellipseToPolygon(center, distanceLon, disanceLat, angle, numberOfEdges);
+const points = ellipseToPolygon(center, semiMajorAxis, semiMinorAxis, angle, numberOfEdges);
 /*
  *
 points:
